@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3 uid="uid://jksi2kr0hj6l"]
+
+[ext_resource type="Script" path="res://FrogsField/Main.gd" id="1_hj1t8"]
+[ext_resource type="Texture2D" uid="uid://ny6rvsscmx7m" path="res://FrogsField/icon.svg" id="2_v3x5i"]
+[ext_resource type="Script" path="res://FrogsField/Platform.gd" id="3_8ka80"]
+[ext_resource type="Script" path="res://FrogsField/Player.gd" id="4_ftm3v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_423is"]
+radius = 70.5306
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3tcdm"]
+radius = 103.238
+
+[node name="FrogsField" type="Node2D"]
+script = ExtResource("1_hj1t8")
+
+[node name="LogPlatformBeta" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(472, 680)
+scale = Vector2(0.865234, 2.98437)
+texture = ExtResource("2_v3x5i")
+script = ExtResource("3_8ka80")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="LogPlatformBeta"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LogPlatformBeta/Area2D"]
+shape = SubResource("CircleShape2D_423is")
+
+[node name="Timer" type="Timer" parent="LogPlatformBeta"]
+wait_time = 5.0
+one_shot = true
+
+[node name="PadPlatformBeta" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(294, 698)
+scale = Vector2(1.06543, 0.839842)
+texture = ExtResource("2_v3x5i")
+script = ExtResource("3_8ka80")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="PadPlatformBeta"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PadPlatformBeta/Area2D"]
+shape = SubResource("CircleShape2D_423is")
+
+[node name="Timer" type="Timer" parent="PadPlatformBeta"]
+wait_time = 3.5
+one_shot = true
+
+[node name="TwigPlatformBeta" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(269, 486)
+scale = Vector2(0.38867, 1.05469)
+texture = ExtResource("2_v3x5i")
+script = ExtResource("3_8ka80")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="TwigPlatformBeta"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TwigPlatformBeta/Area2D"]
+shape = SubResource("CircleShape2D_423is")
+
+[node name="Timer" type="Timer" parent="TwigPlatformBeta"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Side2" type="Sprite2D" parent="."]
+position = Vector2(577, 639)
+scale = Vector2(0.255857, 9.57812)
+texture = ExtResource("2_v3x5i")
+script = ExtResource("3_8ka80")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Side2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side2/Area2D"]
+shape = SubResource("CircleShape2D_423is")
+
+[node name="Timer" type="Timer" parent="Side2"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Side1" type="Sprite2D" parent="."]
+position = Vector2(177, 625)
+scale = Vector2(0.255857, 9.57812)
+texture = ExtResource("2_v3x5i")
+script = ExtResource("3_8ka80")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Side1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side1/Area2D"]
+shape = SubResource("CircleShape2D_423is")
+
+[node name="Timer" type="Timer" parent="Side1"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(445, 1072)
+script = ExtResource("4_ftm3v")
+metadata/_edit_group_ = true
+
+[node name="Body" type="Sprite2D" parent="Player"]
+position = Vector2(1.00002, 7.62939e-06)
+scale = Vector2(1.41406, 1.45312)
+texture = ExtResource("2_v3x5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_3tcdm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(445, 0)
+texture = ExtResource("2_v3x5i")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://mitlh02pv04g"]
+
+[ext_resource type="Texture2D" uid="uid://ny6rvsscmx7m" path="res://FrogsField/icon.svg" id="1_cigs2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kt3hr"]
+size = Vector2(110, 238)
+
+[node name="Log" type="StaticBody2D"]
+position = Vector2(343, 725)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(1.00781, 2.08594)
+texture = ExtResource("1_cigs2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_kt3hr")

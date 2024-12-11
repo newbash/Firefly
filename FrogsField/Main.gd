@@ -15,11 +15,11 @@ func _unhandled_input(event):
 	if event.is_action_pressed("ui_left"):
 		print("A key pressed (ui_left detected)")
 		_resume_game()
-		_jump($PadPlatform.position)
+		_jump($PadPlatformBeta.position)
 	elif event.is_action_pressed("ui_right"):
 		print("D key pressed (ui_right detected)")
 		_resume_game()
-		_jump($LogPlatform.position)
+		_jump($LogPlatformBeta.position)
 	else:
 		print("Unhandled input: ", event)
 

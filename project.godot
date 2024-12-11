@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Firefly"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://FrogsField/FrogsField.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://FrogsField/icon.svg"
 
 [display]
 

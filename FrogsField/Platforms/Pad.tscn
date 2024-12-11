@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b001pn7timj02"]
+
+[ext_resource type="Texture2D" uid="uid://ny6rvsscmx7m" path="res://FrogsField/icon.svg" id="1_m52kk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3457k"]
+radius = 36.4966
+
+[node name="Pad" type="StaticBody2D"]
+position = Vector2(371, 570)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.59375, 0.601562)
+texture = ExtResource("1_m52kk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3457k")
